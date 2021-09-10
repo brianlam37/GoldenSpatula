@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap');
 #header-img {
     height: 50px;
-    width: 50px;
 }
 body {
     font-family: Poppins, sans-serif, Arial;
@@ -58,6 +57,10 @@ section {
     text-align: center;
     background-color: #ffb700;
     width: 100%;
+}
+.showcase-grid {
+    display: flex;
+    justify-content: space-evenly;
 }
 #features,
 #products,
