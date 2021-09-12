@@ -1,12 +1,3 @@
-<!-- 
-
-Hello Camper!
-
-Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
-
-- The freeCodeCamp Team 
-
--->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,7 +11,7 @@ Please read the README below in the JS Editor before beginning. Feel free to del
             integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
             crossorigin="anonymous"
         />
-        <title>Document</title>
+        <title>Golden Spatula</title>
     </head>
     <body>
         <header id="header">
@@ -29,8 +20,9 @@ Please read the README below in the JS Editor before beginning. Feel free to del
             </div>
             <nav id="nav-bar">
                 <div><a class="nav-link" href="#features">Features</a></div>
-                <div><a class="nav-link" href="#showcase">Showcase</a></div>
+                <!-- <div><a class="nav-link" href="#showcase">Showcase</a></div> -->
                 <div><a class="nav-link" href="#products">Products</a></div>
+                <div><a class="nav-link" href="#contact">Contact</a></div>
             </nav>
         </header>
         <main>
@@ -40,22 +32,19 @@ Please read the README below in the JS Editor before beginning. Feel free to del
                     <h1 id="slogan">Bikini Bottom's best spatulas are here!</h1>
                     <button><a href="#products">Buy now</a></button>
                 </div>
-                <!-- <img
-                    src="https://www.svgrepo.com/show/72493/spatula.svg"
-                    alt="spatula"
-                /> -->
             </section>
 
             <section id="features">
+                <h3>Features</h3>
                 <div class="box line">
                     <div class="feature-item">
                         <i class="fas fa-magic fa-2x"></i>
-                        Quality Metal
+                        Made with Quality Metals
                     </div>
 
                     <div class="feature-item">
                         <i class="fas fa-hammer fa-2x"></i>
-                        Lifetime Warranty
+                        Lifetime Warranty Included
                     </div>
 
                     <div class="feature-item">
@@ -65,26 +54,34 @@ Please read the README below in the JS Editor before beginning. Feel free to del
                 </div>
             </section>
             <section id="showcase">
-                <h3>See it in Action</h3>
+                <!-- <h3>See it in Action</h3> -->
                 <div class="showcase-grid">
-                    <div class="showcase-left">
-                        <iframe
+                    <div class="showcase-left column">
+                        <img src="./assets/side.jpg" alt="burgers" />
+                        <!-- <iframe
                             id="video"
                             src="https://www.youtube.com/embed/yTizYLGcptI"
                             title="YouTube video player"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen
-                        ></iframe>
+                        ></iframe> -->
                     </div>
 
-                    <div class="showcase-right">
+                    <div class="showcase-right column">
                         <div class="showcase-tagline">
-                            Trustworthy and Reliable, no magic needed
+                            The right spatula for you
                         </div>
                         <div class="showcase-blurb">
                             Our Spatulas are made to handle whatever you cook,
                             whenever you cook.
+                        </div>
+                        <div>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Totam earum sapiente pariatur perferendis quae
+                            ex aspernatur at inventore cum libero assumenda
+                            minima atque architecto, nisi, ipsa suscipit culpa
+                            alias dolorum.
                         </div>
                     </div>
                 </div>
@@ -137,25 +134,33 @@ Please read the README below in the JS Editor before beginning. Feel free to del
                     id="form"
                     action="https://www.freecodecamp.com/email-submit"
                 >
-                    <div>Name:</div>
-                    <input
-                        id="name"
-                        type="text"
-                        placeholder="Enter your name"
-                        required
-                    />
-                    <div>Email:</div>
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="Enter your email address"
-                        required
-                    />
+                    <label>
+                        Name:
+                        <input
+                            id="name"
+                            type="text"
+                            placeholder="Enter your name"
+                            required
+                    /></label>
+
+                    <label>
+                        Email:
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="Enter your email address"
+                            required
+                        />
+                    </label>
+                    <label>
+                        Comments:
+                        <textarea></textarea>
+                    </label>
                     <div><input type="submit" id="submit" /></div>
                 </form>
             </section>
         </main>
-        <footer>Copyright 2016, GoldenSpatula</footer>
+        <footer>Copyright 2021, GoldenSpatula</footer>
     </body>
 </html>
