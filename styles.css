@@ -7,10 +7,20 @@ body,
 textarea {
     font-family: Poppins, sans-serif, Arial;
 }
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
-    box-sizing: border-box;
     scroll-behavior: smooth;
+}
+button,
+input[type='submit'] {
+    font-family: Poppins, Arial;
+    background-color: #ffb700;
+    border-radius: 5px;
+    color: #000;
+    border: none;
 }
 #header {
     padding: 5px;
@@ -73,7 +83,7 @@ section {
 .showcase-left img {
     width: 100%;
     height: 100%;
-    object-fit: center;
+    object-fit: cover;
 }
 .showcase-right {
     display: flex;
@@ -94,9 +104,21 @@ section {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
+#showcase button {
+    background-color: #fff;
+}
+#showcase button {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 5px 10px;
+    transition: transform 0.5s;
+}
+#showcase button:hover {
+    color: #000;
+    transform: translatey(-10%);
+}
 #features,
-#products,
-#contact {
+#products {
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -134,22 +156,24 @@ section {
 #contact {
     text-align: center;
 }
+
 .price-box {
     text-align: center;
     min-width: 200px;
+    background-color: #eee;
+    transition: transform 0.5s;
+}
+.price-box:hover {
+    transform: scale(1.1);
 }
 .price-box div {
     text-align: left;
     padding: 10px;
 }
-button,
-input[type='submit'] {
-    font-family: Poppins, Arial;
-    background-color: #ffb700;
-    border-radius: 5px;
-    color: #000;
-    border: none;
+.price-box button {
+    margin-bottom: 10px;
 }
+
 img {
     color: #fff;
 }
@@ -190,52 +214,58 @@ button:hover {
     margin-left: 25px;
 }
 
-#hero button {
+#hero a {
     font-family: Poppins, Arial;
     background-color: #fff;
-    border-radius: 25px;
-    color: #000;
-    border: 2px #000 solid;
-}
-#hero button a {
+    text-align: center;
+    border: 1px #000 solid;
     text-decoration: none;
     display: block;
     padding: 5px 10px;
     color: #000;
+    width: fit-content;
+    border-radius: 5px;
 }
-#hero button a:hover {
-    color: #fff;
+#hero div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#hero button:hover {
+#hero {
+    text-align: center;
+}
+#hero a:hover {
     font-family: Poppins, Arial;
     background-color: #ffb700;
-    border-radius: 25px;
+
     color: #fff;
 
-    border: 2px #000 solid;
     cursor: pointer;
 }
 #contact {
-    background-color: #ffb700;
-    margin-bottom: 50px;
+    background-color: #555555;
+    display: flex;
     width: 100%;
 }
-
+#contact img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 #contact input {
     margin: 5px 0;
 }
 #contact form {
+    color: #fff;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: flex-start;
-    background: #fff;
-    border-radius: 5px;
-    max-width: 600px;
-    margin-right: auto;
-    margin-left: auto;
-    height: 400px;
+
     padding: 15px;
+}
+#contact input[type='submit'] {
+    background-color: #ccc;
 }
 #contact label {
     display: flex;
@@ -246,19 +276,23 @@ button:hover {
     text-align: left;
 }
 #contact textarea {
-    height: 200px;
+    height: 15rem;
+    border-radius: 5px;
 }
 #contact input {
-    padding: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
 }
 #contact div {
     text-align: left;
 }
 
 footer {
-    text-align: right;
-    background-color: #ccc;
+    text-align: center;
+    background-color: #fff;
     padding: 15px 20px;
+    box-shadow: #ccc 0 -1px 5px;
 }
 
 @media (max-width: 800px) {
@@ -269,10 +303,9 @@ footer {
         grid-template-columns: 1fr;
     }
     .price-box {
-        border: 1px solid #000;
-        padding: 5px;
-        border-radius: 5px;
         margin: auto;
+    }
+    .price-title {
     }
     .price-box div {
         text-align: center;
@@ -326,6 +359,9 @@ footer {
         height: 100%;
         top: 0;
         left: 0;
+    }
+    #contact {
+        flex-direction: column-reverse;
     }
     #contact form {
         margin: 0 5px;
